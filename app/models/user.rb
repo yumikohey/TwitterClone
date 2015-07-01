@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
 
+	#defined a class method
 	class << self
 		def from_omniauth(auth_hash)
+			# check if the login user is in DB, if not, create a new account.
 			user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
 			user.name = auth_hash['info']['name']
 			user.location = auth_hash['info']['location']

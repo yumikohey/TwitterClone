@@ -9,5 +9,6 @@ class ApplicationController < ActionController::Base
   	@current_user ||= User.find_by(id: session[:user_id])
   end
 
+  # View can call this method
   helper_method :current_user
 end
