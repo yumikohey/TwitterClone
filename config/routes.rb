@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
-  root to: 'users#index'
+  root to: 'users#show'
 
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  post '/users/tweet', to: 'users#tweet'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

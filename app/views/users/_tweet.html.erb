@@ -1,0 +1,11 @@
+<div class="well">
+  <%= form_for("tweet", url: 'users/tweet') do |f| %>
+    <div class="form-group">
+      <%= f.label :content, 'Enter your comment:' %>
+      <%= f.text_area :content, rows: 3, class: 'form-control', required: true, maxlength: 144 %>
+      <small class="label label-warning">Cannot be blank or contain more than 144 symbols.</small>
+    </div>
+ 
+    <%= f.submit 'Post', class: 'btn btn-primary btn-lg' %>
+  <% end %>
+</div>

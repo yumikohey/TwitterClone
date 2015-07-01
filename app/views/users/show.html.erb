@@ -1,0 +1,15 @@
+<% if current_user %>
+	<%= render 'tweet' %>
+	<% @timeline.each do |tweet| %>
+	<div class="row">
+		<div class="col-lg-2">
+			<%= tweet.created_at %>
+		</div>
+		<div class="col-lg-9 col-lg-offset-1">
+			<%= tweet.text %>
+		</div>
+	</div>
+<% end %>
+<% else %>
+	hello
+<% end %>
