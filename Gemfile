@@ -34,6 +34,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
 
+gem 'omniauth-twitter'
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 
 
 group :development, :test do
