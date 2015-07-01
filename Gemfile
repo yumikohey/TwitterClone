@@ -51,3 +51,9 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'puma'
+  
+end
+
